@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=scrum-poker
+Comment=Scrum poker cards for agile planning
+Exec=/usr/bin/qmlscene $@ /usr/share/scrum-poker/scrum-poker.qml
+Icon=qmlscene
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
