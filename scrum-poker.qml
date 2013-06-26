@@ -27,10 +27,9 @@ MainView {
         Column {
             spacing: units.gu(2)
             anchors {
-                margins: units.gu(2)
+                margins: units.gu(1)
                 fill: parent
-                left: parent.left
-                right: parent.right
+                //centerIn: parent
             }
             
             Label {
@@ -42,8 +41,8 @@ MainView {
                 UbuntuShape {
                     color: "darkgray"
                     radius: "small"
-                    width: units.gu(7)
-                    height: units.gu(9)
+                    width: units.gu(9)
+                    height: units.gu(12)
 
                     Label {
                         anchors.centerIn: parent
@@ -56,8 +55,8 @@ MainView {
                 UbuntuShape {
                     color: "darkgray"
                     radius: "small"
-                    width: units.gu(7)
-                    height: units.gu(9)
+                    width: units.gu(9)
+                    height: units.gu(12)
 
                     Label {
                         anchors.centerIn: parent
@@ -70,8 +69,8 @@ MainView {
                 UbuntuShape {
                     color: "darkgray"
                     radius: "small"
-                    width: units.gu(7)
-                    height: units.gu(9)
+                    width: units.gu(9)
+                    height: units.gu(12)
 
                     Label {
                         anchors.centerIn: parent
@@ -87,8 +86,8 @@ MainView {
                 UbuntuShape {
                     color: "darkgray"
                     radius: "small"
-                    width: units.gu(7)
-                    height: units.gu(9)
+                    width: units.gu(9)
+                    height: units.gu(12)
 
                     Label {
                         anchors.centerIn: parent
@@ -101,8 +100,8 @@ MainView {
                 UbuntuShape {
                     color: "darkgray"
                     radius: "small"
-                    width: units.gu(7)
-                    height: units.gu(9)
+                    width: units.gu(9)
+                    height: units.gu(12)
 
                     Label {
                         anchors.centerIn: parent
@@ -115,8 +114,8 @@ MainView {
                 UbuntuShape {
                     color: "darkgray"
                     radius: "small"
-                    width: units.gu(7)
-                    height: units.gu(9)
+                    width: units.gu(9)
+                    height: units.gu(12)
 
                     Label {
                         anchors.centerIn: parent
@@ -132,8 +131,8 @@ MainView {
                 UbuntuShape {
                     color: "darkgray"
                     radius: "small"
-                    width: units.gu(7)
-                    height: units.gu(9)
+                    width: units.gu(9)
+                    height: units.gu(12)
 
                     Label {
                         anchors.centerIn: parent
@@ -146,12 +145,12 @@ MainView {
                 UbuntuShape {
                     color: "darkgray"
                     radius: "small"
-                    width: units.gu(7)
-                    height: units.gu(9)
+                    width: units.gu(9)
+                    height: units.gu(12)
 
                     Label {
                         anchors.centerIn: parent
-                        text: "13"
+                        text: "12"
                         fontSize: "x-large"
                         color: "#f1f1f1"
                     }
@@ -160,8 +159,8 @@ MainView {
                 UbuntuShape {
                     color: "darkgray"
                     radius: "small"
-                    width: units.gu(7)
-                    height: units.gu(9)
+                    width: units.gu(9)
+                    height: units.gu(12)
 
                     Label {
                         anchors.centerIn: parent
@@ -177,8 +176,8 @@ MainView {
                 UbuntuShape {
                     color: "darkgray"
                     radius: "small"
-                    width: units.gu(7)
-                    height: units.gu(9)
+                    width: units.gu(9)
+                    height: units.gu(12)
 
                     Label {
                         anchors.centerIn: parent
@@ -191,8 +190,8 @@ MainView {
                 UbuntuShape {
                     color: "darkgray"
                     radius: "small"
-                    width: units.gu(7)
-                    height: units.gu(9)
+                    width: units.gu(9)
+                    height: units.gu(12)
 
                     Label {
                         anchors.centerIn: parent
@@ -205,25 +204,8 @@ MainView {
                 UbuntuShape {
                     color: "darkgray"
                     radius: "small"
-                    width: units.gu(7)
-                    height: units.gu(9)
-
-                    Label {
-                        anchors.centerIn: parent
-                        text: "∞"
-                        fontSize: "x-large"
-                        color: "#f1f1f1"
-                    }
-                }
-            }
-
-            Row {
-                spacing: units.gu(4)
-                UbuntuShape {
-                    color: "darkgray"
-                    radius: "small"
-                    width: units.gu(7)
-                    height: units.gu(9)
+                    width: units.gu(9)
+                    height: units.gu(12)
 
                     Label {
                         anchors.centerIn: parent
