@@ -28,8 +28,7 @@ MainView {
             spacing: units.gu(2)
             anchors {
                 margins: units.gu(1)
-                fill: parent
-                //centerIn: parent
+                centerIn: parent
             }
             
             Label {

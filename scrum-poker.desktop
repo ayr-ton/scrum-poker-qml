@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=scrum-poker
+Name=Scrum Poker
 Comment=Scrum poker cards for agile planning
 Exec=/usr/bin/qmlscene $@ /usr/share/scrum-poker/scrum-poker.qml
 Icon=qmlscene
