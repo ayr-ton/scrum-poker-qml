@@ -30,6 +30,24 @@ MainView {
                 margins: units.gu(1)
                 centerIn: parent
             }
+
+            Component {
+                id: smallCard
+                UbuntuShape {
+                    property string labelText
+                    color: "darkgray"
+                    radius: "small"
+                    width: units.gu(9)
+                    height: units.gu(12)
+
+                    Label {
+                        text: labelText
+                        anchors.centerIn: parent
+                        fontSize: "x-large"
+                        color: "#f1f1f1"
+                    }
+                }
+            }
             
             Label {
                 id: label
@@ -37,180 +55,108 @@ MainView {
             }
             Row {
                 spacing: units.gu(4)
-                UbuntuShape {
-                    color: "darkgray"
-                    radius: "small"
-                    width: units.gu(9)
-                    height: units.gu(12)
-
-                    Label {
-                        anchors.centerIn: parent
-                        text: "0"
-                        fontSize: "x-large"
-                        color: "#f1f1f1"
+                Loader {
+                    id: zeroSmall
+                    sourceComponent: smallCard
+                    Component.onCompleted: {
+                        item.labelText = "0"
                     }
                 }
 
-                UbuntuShape {
-                    color: "darkgray"
-                    radius: "small"
-                    width: units.gu(9)
-                    height: units.gu(12)
-
-                    Label {
-                        anchors.centerIn: parent
-                        text: "1/2"
-                        fontSize: "x-large"
-                        color: "#f1f1f1"
+                Loader {
+                    id: halfSmall
+                    sourceComponent: smallCard
+                    Component.onCompleted: {
+                        item.labelText = "1/2"
                     }
                 }
 
-                UbuntuShape {
-                    color: "darkgray"
-                    radius: "small"
-                    width: units.gu(9)
-                    height: units.gu(12)
-
-                    Label {
-                        anchors.centerIn: parent
-                        text: "1"
-                        fontSize: "x-large"
-                        color: "#f1f1f1"
+                Loader {
+                    id: oneSmall
+                    sourceComponent: smallCard
+                    Component.onCompleted: {
+                        item.labelText = "1"
                     }
                 }
             }
 
             Row {
                 spacing: units.gu(4)
-                UbuntuShape {
-                    color: "darkgray"
-                    radius: "small"
-                    width: units.gu(9)
-                    height: units.gu(12)
-
-                    Label {
-                        anchors.centerIn: parent
-                        text: "2"
-                        fontSize: "x-large"
-                        color: "#f1f1f1"
+                Loader {
+                    id: twoSmall
+                    sourceComponent: smallCard
+                    Component.onCompleted: {
+                        item.labelText = "2"
                     }
                 }
 
-                UbuntuShape {
-                    color: "darkgray"
-                    radius: "small"
-                    width: units.gu(9)
-                    height: units.gu(12)
-
-                    Label {
-                        anchors.centerIn: parent
-                        text: "3"
-                        fontSize: "x-large"
-                        color: "#f1f1f1"
+                Loader {
+                    id: threeSmall
+                    sourceComponent: smallCard
+                    Component.onCompleted: {
+                        item.labelText = "3"
                     }
                 }
 
-                UbuntuShape {
-                    color: "darkgray"
-                    radius: "small"
-                    width: units.gu(9)
-                    height: units.gu(12)
-
-                    Label {
-                        anchors.centerIn: parent
-                        text: "5"
-                        fontSize: "x-large"
-                        color: "#f1f1f1"
+                Loader {
+                    id: fiveSmall
+                    sourceComponent: smallCard
+                    Component.onCompleted: {
+                        item.labelText = "5"
                     }
                 }
             }
 
             Row {
                 spacing: units.gu(4)
-                UbuntuShape {
-                    color: "darkgray"
-                    radius: "small"
-                    width: units.gu(9)
-                    height: units.gu(12)
-
-                    Label {
-                        anchors.centerIn: parent
-                        text: "8"
-                        fontSize: "x-large"
-                        color: "#f1f1f1"
+                Loader {
+                    id: eightSmall
+                    sourceComponent: smallCard
+                    Component.onCompleted: {
+                        item.labelText = "8"
                     }
                 }
 
-                UbuntuShape {
-                    color: "darkgray"
-                    radius: "small"
-                    width: units.gu(9)
-                    height: units.gu(12)
-
-                    Label {
-                        anchors.centerIn: parent
-                        text: "12"
-                        fontSize: "x-large"
-                        color: "#f1f1f1"
+                Loader {
+                    id: twelveSmall
+                    sourceComponent: smallCard
+                    Component.onCompleted: {
+                        item.labelText = "12"
                     }
                 }
 
-                UbuntuShape {
-                    color: "darkgray"
-                    radius: "small"
-                    width: units.gu(9)
-                    height: units.gu(12)
-
-                    Label {
-                        anchors.centerIn: parent
-                        text: "20"
-                        fontSize: "x-large"
-                        color: "#f1f1f1"
+                Loader {
+                    id: twentySmall
+                    sourceComponent: smallCard
+                    Component.onCompleted: {
+                        item.labelText = "20"
                     }
                 }
             }
 
             Row {
                 spacing: units.gu(4)
-                UbuntuShape {
-                    color: "darkgray"
-                    radius: "small"
-                    width: units.gu(9)
-                    height: units.gu(12)
-
-                    Label {
-                        anchors.centerIn: parent
-                        text: "40"
-                        fontSize: "x-large"
-                        color: "#f1f1f1"
+                Loader {
+                    id: fourtySmall
+                    sourceComponent: smallCard
+                    Component.onCompleted: {
+                        item.labelText = "40"
                     }
                 }
 
-                UbuntuShape {
-                    color: "darkgray"
-                    radius: "small"
-                    width: units.gu(9)
-                    height: units.gu(12)
-
-                    Label {
-                        anchors.centerIn: parent
-                        text: "100"
-                        fontSize: "x-large"
-                        color: "#f1f1f1"
+                Loader {
+                    id: hundredSmall
+                    sourceComponent: smallCard
+                    Component.onCompleted: {
+                        item.labelText = "100"
                     }
                 }
 
-                UbuntuShape {
-                    color: "darkgray"
-                    radius: "small"
-                    width: units.gu(9)
-                    height: units.gu(12)
-
-                    Label {
-                        anchors.centerIn: parent
-                        text: "?"
-                        fontSize: "x-large"
-                        color: "#f1f1f1"
+                Loader {
+                    id: dontknowSmall
+                    sourceComponent: smallCard
+                    Component.onCompleted: {
+                        item.labelText = "?"
                     }
                 }
             }
