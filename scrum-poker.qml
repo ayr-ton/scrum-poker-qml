@@ -76,7 +76,6 @@ MainView {
             Row {
                 spacing: units.gu(4)
                 Loader {
-                    id: zero
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "0"
@@ -84,7 +83,6 @@ MainView {
                 }
 
                 Loader {
-                    id: half
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "1/2"
@@ -92,7 +90,6 @@ MainView {
                 }
 
                 Loader {
-                    id: one
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "1"
@@ -103,7 +100,6 @@ MainView {
             Row {
                 spacing: units.gu(4)
                 Loader {
-                    id: two
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "2"
@@ -111,7 +107,6 @@ MainView {
                 }
 
                 Loader {
-                    id: three
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "3"
@@ -119,7 +114,6 @@ MainView {
                 }
 
                 Loader {
-                    id: five
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "5"
@@ -130,7 +124,6 @@ MainView {
             Row {
                 spacing: units.gu(4)
                 Loader {
-                    id: eight
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "8"
@@ -138,7 +131,6 @@ MainView {
                 }
 
                 Loader {
-                    id: twelve
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "12"
@@ -146,7 +138,6 @@ MainView {
                 }
 
                 Loader {
-                    id: twenty
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "20"
@@ -157,7 +148,6 @@ MainView {
             Row {
                 spacing: units.gu(4)
                 Loader {
-                    id: fourty
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "40"
@@ -165,7 +155,6 @@ MainView {
                 }
 
                 Loader {
-                    id: hundred
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "100"
@@ -173,7 +162,6 @@ MainView {
                 }
 
                 Loader {
-                    id: dontknow
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "?"
