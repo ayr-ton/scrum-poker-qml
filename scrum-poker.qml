@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Ubuntu.Components 0.1
+import Ubuntu.Components.Popups 0.1
 
 /*!
     \brief MainView with a Label and Button elements.
@@ -23,6 +24,8 @@ MainView {
 
     Page {
         title: "Scrum Poker"
+        id: page
+        property string cardNumber
 
         Column {
             spacing: units.gu(2)
@@ -33,18 +36,35 @@ MainView {
 
             Component {
                 id: smallCard
-                UbuntuShape {
+                Button {
                     property string labelText
                     color: "darkgray"
-                    radius: "small"
                     width: units.gu(9)
                     height: units.gu(12)
+                    text: labelText
+                    onClicked: {
+                        page.cardNumber = labelText
+                        PopupUtils.open(dialog, null)
+                    }
+                }
+            }
 
-                    Label {
-                        text: labelText
-                        anchors.centerIn: parent
-                        fontSize: "x-large"
-                        color: "#f1f1f1"
+            Component {
+                id: dialog
+                Dialog {
+                    id: dialogue
+
+                    title: i18n.tr("Hidden card")
+                    text: i18n.tr("Are you want to show the card?")
+
+                    Button {
+                        text: i18n.tr("Cancel")
+                        onClicked: PopupUtils.close(dialogue)
+                    }
+                    Button {
+                        text: i18n.tr("Show " + page.cardNumber)
+                        color: "#5da357"
+                        onClicked: PopupUtils.close(dialogue)
                     }
                 }
             }
@@ -56,7 +76,7 @@ MainView {
             Row {
                 spacing: units.gu(4)
                 Loader {
-                    id: zeroSmall
+                    id: zero
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "0"
@@ -64,7 +84,7 @@ MainView {
                 }
 
                 Loader {
-                    id: halfSmall
+                    id: half
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "1/2"
@@ -72,7 +92,7 @@ MainView {
                 }
 
                 Loader {
-                    id: oneSmall
+                    id: one
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "1"
@@ -83,7 +103,7 @@ MainView {
             Row {
                 spacing: units.gu(4)
                 Loader {
-                    id: twoSmall
+                    id: two
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "2"
@@ -91,7 +111,7 @@ MainView {
                 }
 
                 Loader {
-                    id: threeSmall
+                    id: three
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "3"
@@ -99,7 +119,7 @@ MainView {
                 }
 
                 Loader {
-                    id: fiveSmall
+                    id: five
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "5"
@@ -110,7 +130,7 @@ MainView {
             Row {
                 spacing: units.gu(4)
                 Loader {
-                    id: eightSmall
+                    id: eight
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "8"
@@ -118,7 +138,7 @@ MainView {
                 }
 
                 Loader {
-                    id: twelveSmall
+                    id: twelve
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "12"
@@ -126,7 +146,7 @@ MainView {
                 }
 
                 Loader {
-                    id: twentySmall
+                    id: twenty
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "20"
@@ -137,7 +157,7 @@ MainView {
             Row {
                 spacing: units.gu(4)
                 Loader {
-                    id: fourtySmall
+                    id: fourty
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "40"
@@ -145,7 +165,7 @@ MainView {
                 }
 
                 Loader {
-                    id: hundredSmall
+                    id: hundred
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "100"
@@ -153,7 +173,7 @@ MainView {
                 }
 
                 Loader {
-                    id: dontknowSmall
+                    id: dontknow
                     sourceComponent: smallCard
                     Component.onCompleted: {
                         item.labelText = "?"
